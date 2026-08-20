@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-canvas text-ink font-body antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+  ::selection {
+    @apply bg-coral-100;
+  }
+}
+
+@layer utilities {
+  .card {
+    @apply bg-white rounded-2xl border border-line shadow-card;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-all duration-150 active:scale-[0.97] disabled:opacity-40 disabled:pointer-events-none;
+  }
+  .btn-primary {
+    @apply btn bg-teal-900 text-white hover:bg-teal-950 shadow-sm;
+  }
+  .btn-coral {
+    @apply btn bg-coral-500 text-white hover:bg-coral-600 shadow-sm;
+  }
+  .btn-ghost {
+    @apply btn bg-transparent text-teal-900 hover:bg-teal-100;
+  }
+  .btn-outline {
+    @apply btn bg-white text-ink border border-line hover:border-teal-500;
+  }
+  .input {
+    @apply w-full rounded-xl border border-line bg-white px-3.5 py-2.5 text-sm text-ink placeholder:text-ink/35 focus:outline-none focus:ring-2 focus:ring-teal-500/40 focus:border-teal-500 transition;
+  }
+  .label {
+    @apply block text-xs font-semibold uppercase tracking-wide text-ink/50 mb-1.5;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-semibold;
+  }
+}
+
+/* Dark mode is persisted by Layout and deliberately keeps the status colors vivid. */
+.dark body, .dark .bg-canvas { background-color: #0b1820; color: #e5f0f0; }
+.dark .card, .dark .bg-white, .dark .bg-white\/90, .dark .input, .dark .btn-outline { background-color: #112731; color: #e5f0f0; }
+.dark .border-line, .dark .border-b { border-color: #27404a; }
+.dark .text-ink, .dark .text-ink\/85, .dark .text-ink\/75, .dark .text-ink\/70, .dark .text-ink\/60, .dark .text-ink\/55, .dark .text-ink\/50, .dark .text-ink\/45, .dark .text-ink\/40, .dark .text-ink\/35 { color: #c7d8da; }
+.dark .bg-teal-100, .dark .bg-mint-100, .dark .bg-amber-100, .dark .bg-coral-100, .dark .bg-canvas { background-color: #17333d; }
+.dark .btn-ghost { color: #a8dce4; }
+
+.leaflet-container {
+  font-family: "Inter", sans-serif;
+  border-radius: 1rem;
+}
+
+@keyframes goldenSweep {
+  from { stroke-dashoffset: 0; }
+}

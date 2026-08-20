@@ -1,0 +1,12 @@
+{
+  "name": "SARTHI — Emergency Referral Coordination",
+  "short_name": "SARTHI",
+  "description": "Real-time hospital referral and resource coordination for rural healthcare.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F5F8F7",
+  "theme_color": "#0B5566",
+  "icons": [
+    { "src": "/sarthi-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
